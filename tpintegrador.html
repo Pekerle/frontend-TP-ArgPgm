@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>TP Integrador</title>
+      <link rel="stylesheet" type="text/css" href="./styles/tpintegrador.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;700;900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	
+   </head>
+   <body>
+      <div id="wrapper">
+         <nav id="navbar" class="navbar navbar-expand-md py-3 bg-white">
+            <div class="container-md">
+               <a class="navbar-brand me-auto" href="#">
+               <img src="./images/logo.png" alt="">
+               </a>
+               <div class="navbar-right">
+                  <button class="btn ms-2 px-3" id="button-login" type="button">Ingresar</button>
+                  <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                     <div class="navbar-nav navbar-right__list">
+                        <a class="nav-link" href="#">Cursos</a>
+                        <a class="nav-link" href="#">Conócenos</a>
+                        <a class="nav-link" href="#">FAQS</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </nav>
+         <div id="content" class="text-center">
+            <div class="banner-principal d-flex justify-content-center position-relative">
+               <img src="./images/banner-principal.jpg" class="img-fluid w-100">
+               <div class="banner-principal__text container-md position-absolute start-50 top-50 translate-middle p-0">
+                  <h1 class="title">¡Aprende a programar hoy!</h1>
+                  <div class="bajada col-md-5 mx-auto px-2">Desarrolla tus habilidades de programación y convierte tus ideas en código</div>
+                  <button class="btn button-begin" type="button">Comenzar</button>
+               </div>
+            </div>
+            <div class="about-us d-block bg-gray">
+               <div class="container py-5">
+                  <h3 class="pretitle m-0">CONÓCENOS</h3>
+                  <h2 class="title mb-5">Quienes somos</h2>
+                  <p class="col-md-8 mx-auto px-3">En Mushio, somos un apasionado equipo de expertos en programación con amplia experiencia en la industria del software y la enseñanza. Nuestra misión es brindar cursos de programación accesibles y divertidos para todos, independientemente de tu nivel de habilidad. Creemos que la programación es una habilidad valiosa que puede cambiar vidas, y estamos comprometidos en ayudarte a descubrir tu potencial en el mundo de la tecnología a través de nuestro enfoque práctico, creativo y centrado en el estudiante.</p>
+               </div>
+            </div>
+            <div class="register-form__container text-start">
+               <div class="container">
+                  <form id="register-form" class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex flex-column mx-auto p-2 p-sm-4 my-4">
+                     <div class="step" id="step1" data-step="1">
+                        <h2 class="mb-4">Datos de cuenta</h2>
+                        <div class="row px-3">
+                           <div class="form-floating col-12 col-sm-6 mb-3 px-1">
+                              <input type="text" class="form-control" id="floatingName" placeholder="Nombre">
+                              <label for="floatingName">Nombre</label>
+                              <div class="invalid-feedback">Ingrese su nombre</div>
+                           </div>
+                           <div class="form-floating col-12 col-sm-6 mb-3 px-1">
+                              <input type="text" class="form-control" id="floatingSurname" placeholder="Apellido">
+                              <label for="floatingSurname">Apellido</label>
+                              <div class="invalid-feedback">Ingrese su apellido</div>
+                           </div>
+                        </div>
+                        <div class="row px-3">
+                           <div class="form-floating col-12 mb-3 px-1">
+                              <input type="email" class="form-control" id="floatingEmail" placeholder="Correo electrónico">
+                              <label for="floatingEmail">Correo electrónico</label>
+                              <div class="invalid-feedback">Correo inválido</div>
+                           </div>
+                        </div>
+                        <div class="row px-3">
+                           <div class="form-floating col-12 col-sm-6 mb-3 px-1">
+                              <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                              <label for="floatingPassword">Contraseña</label>
+                              <div class="invalid-feedback">No coinciden, vacío, o menor a 6 dígitos</div>
+                           </div>
+                           <div class="form-floating col-12 col-sm-6 mb-3 px-1">
+                              <input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirmación">
+                              <label for="floatingConfirmPassword">Confirmación</label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="step" id="step2" data-step="2">
+                        <h2 class="mb-4">Datos personales</h2>
+                        <div class="row px-3">
+                           <h5 class="px-0">Fecha de nacimiento:</h5>
+                           <div class="form-floating col-4 mb-3 px-1">
+                              <input type="number" class="form-control" id="floatingDay" placeholder="Día">
+                              <label for="floatingDay">Día</label>
+                              <div class="invalid-feedback">Día inválido</div>
+                           </div>
+                           <div class="form-floating col-4 mb-3 px-1">
+                              <input type="number" class="form-control" id="floatingMonth" placeholder="Mes">
+                              <label for="floatingMonth">Mes</label>
+                              <div class="invalid-feedback">Mes inválido</div>
+                           </div>
+                           <div class="form-floating col-4 mb-3 px-1">
+                              <input type="number" class="form-control" id="floatingYear" placeholder="Año">
+                              <label for="floatingYear">Año</label>
+                              <div class="invalid-feedback">Año inválido</div>
+                           </div>
+                        </div>
+                        <div class="row px-3">
+                           <select class="form-select col-12 mx-1" id="select-gender">
+                              <option selected disabled>Género</option>
+                              <option value="Hombre">Hombre</option>
+                              <option value="Mujer">Mujer</option>
+                              <option value="Otro">Otro</option>
+                           </select>
+                           <div class="invalid-feedback">Seleccione una opción</div>
+                        </div>
+                     </div>
+                     <div class="step" id="step3" data-step="3">
+                        <h2 class="mb-4">Resumen de los datos ingresados:</h2>
+                        <p><strong>Nombre y Apellido:</strong> <span id="confirmName"></span> <span id="confirmSurname"></span></p>
+                        <p><strong>Fecha de Nacimiento:</strong> <span id="confirmBirthdate"></span></p>
+                        <p><strong>Género:</strong> <span id="confirmGender"></span></p>
+                        <p><strong>Correo electrónico:</strong> <span id="confirmEmail"></span></p>
+						<button class="btn px-3" id="btn-export" type="button">Guardar</button>
+                     </div>
+                     <div class="step overflow-y-scroll" id="step4" data-step="4">
+                        <div class="termsContainer">
+                           <h2 class="mb-4">Términos y condiciones</h2>
+                           <p>Bienvenido a Mushio, donde nos esforzamos por ofrecer la mejor experiencia de aprendizaje en programación para nuestros estudiantes. Al utilizar nuestros servicios, usted acepta cumplir con los siguientes términos y condiciones:</p>
+                           <h4>Contenido y propiedad intelectual</h4>
+                           <p>Todo el contenido disponible en nuestro sitio web, incluyendo pero no limitado a textos, gráficos, imágenes, videos, software y otros materiales, está protegido por derechos de autor y propiedad intelectual. Usted no puede copiar, reproducir, modificar, distribuir, mostrar públicamente o de otra manera explotar ningún contenido sin nuestro permiso expreso por escrito.</p>
+                           <h4>Uso de los servicios</h4>
+                           <p>Nuestros servicios se proporcionan únicamente con fines educativos. Usted acepta utilizar nuestros servicios solo para fines legales y de acuerdo con estos términos y condiciones, así como con las leyes y regulaciones aplicables.</p>
+                           <h4>Pago y reembolsos</h4>
+                           <p>Para acceder a algunos de nuestros servicios, puede ser necesario que pague una tarifa. Los pagos se procesan a través de proveedores de pago de terceros y están sujetos a sus términos y condiciones. No se proporcionarán reembolsos después de la compra de nuestros servicios.</p>
+                           <h4>Limitación de responsabilidad</h4>
+                           <p>En ningún caso seremos responsables ante usted o cualquier tercero por cualquier daño directo, indirecto, incidental, especial, consecuente o punitivo que resulte de su uso de nuestros servicios.</p>
+                           <h4>Modificaciones de los términos y condiciones</h4>
+                           <p>Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento y sin previo aviso. Al continuar utilizando nuestros servicios después de cualquier modificación, acepta estar sujeto a los términos y condiciones modificados.</p>
+                           <h4>Rescisión</h4>
+                           <p>Nos reservamos el derecho de rescindir su acceso a nuestros servicios en cualquier momento y por cualquier motivo sin previo aviso.</p>
+                           <h3>Ley aplicable</h3>
+                           <p>Estos términos y condiciones se regirán e interpretarán de acuerdo con las leyes del país de Argentina sin tener en cuenta las disposiciones de conflicto de leyes.</p>
+                           <h4>Aceptación de Términos y Condiciones</h4>
+                           <p>Al registrarse y utilizar nuestros servicios, usted acepta cumplir y quedar legalmente vinculado por estos términos y condiciones, así como por nuestra política de privacidad. Si no está de acuerdo con alguno de los términos establecidos en este documento, por favor no acceda ni utilice nuestros servicios.</p>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-check ms-1">
+                              <input class="form-check-input" type="checkbox" value="" id="agreeTerms" required>
+                              <label class="form-check-label" for="agreeTerms">
+                              He leído y acepto los terminos y condiciones
+                              </label>
+                              <div class="invalid-feedback">
+                                 No has aceptado los términos y condiciones.
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="step" id="step5" data-step="5" style="">
+                        <div class="d-flex flex-column align-items-center h-100 text-center">
+                           <h2 class="mb-4">Confirmación</h2>
+                           <p id="ajaxText" style="display: none"></p>
+                           <i id="ajaxCheck" class="bi bi-check-circle mt-auto" style="display:none"></i>
+                        </div>
+                     </div>
+                     <div id="register-form__buttons" class="mt-auto pt-3">
+                        <button type="button" class="btn btn-prev">Anterior</button>
+                        <button type="button" class="btn btn-next">Siguiente</button>
+                        <button type="button" class="btn btn-submit">Enviar</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <footer id="footer" class="footer">
+            <div class="container">
+               <div class="footer__top row justify-content-between flex-wrap py-4 text-start">
+                  <div class="footer-column col-12 col-md-4">
+                     <a class="navbar-brand d-block d-md-flex mb-3 mb-md-0 text-center" href="#">
+                     <img class="img-fluid" src="./images/logo-blanco.png" alt="">
+                     </a>
+                     <h3 class="d-block d-md-none mb-4">Nosotros</h3>
+                     <ul class="footer-column__list list-unstyled">
+                        <li class="mb-3"><a class="nav-link" href="#">Cursos</a></li>
+                        <li class="mb-3"><a class="nav-link" href="#">Certificaciones</a></li>
+                        <li class="mb-3"><a class="nav-link" href="#">Nuestro equipo</a></li>
+                        <li class="mb-3"><a class="nav-link" href="#">Mapa del sitio</a></li>
+                     </ul>
+                  </div>
+                  <div class="footer-column col-12 col-md-4 mt-3 mt-md-0">
+                     <h3 class="mb-4">Empresa</h3>
+                     <ul class="footer-column__list list-unstyled">
+                        <li class="mb-3"><a class="nav-link" href="#">Términos y condiciones</a></li>
+                        <li class="mb-3"><a class="nav-link" href="#">Términos de uso</a></li>
+                        <li class="mb-3"><a class="nav-link" href="#">Devoluciones</a></li>
+                        <li class="mb-3"><a class="nav-link" href="#">Trabajá con nosotros</a></li>
+                        <li class="mb-3"><a class="nav-link" href="#">Ayuda</a></li>
+                     </ul>
+                  </div>
+                  <div class="footer-column col-12 col-md-4 mt-3 mt-md-0">
+                     <h3 class="mb-4">Contáctanos</h3>
+                     <form class="w-100 text-center">
+                        <input class="form-control mb-3" type="text" name="name" placeholder="Nombre">
+                        <input class="form-control mb-3" type="text" name="email" placeholder="Correo electrónico">
+                        <textarea class="form-control mb-3" type="text"  placeholder="Mensaje" rows="3" style="resize:none"></textarea>
+                        <button class="btn w-75" id="submit-contact-form" type="submit">Enviar</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__copyright container-fluid py-3 border-top">
+               <p class="text-center m-0">© 2023 Todos los derechos reservados - Mushio</p>
+            </div>
+         </footer>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+	  <script type="text/javascript" src="./js/tpintegrador.js"></script>
+   </body>
+</html>

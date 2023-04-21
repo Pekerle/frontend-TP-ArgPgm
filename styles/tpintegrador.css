@@ -1,0 +1,177 @@
+html,
+body {
+  height: 100%
+}
+
+#wrapper {
+	color: #22193F;
+	font-family: 'Open Sans';
+	font-size: 16px;
+	min-width: 350px;
+}
+
+#wrapper a,
+#wrapper select {
+	color: inherit;
+}
+
+#wrapper a,
+#wrapper button,
+#wrapper .title,
+#wrapper .pretitle {
+	font-family: 'Nunito';
+}
+
+#wrapper .title {
+	font-size: 28px;
+	font-weight: 900;
+}
+
+#wrapper .pretitle {
+	color: #E21982;
+	font-size: 12px;
+	font-weight: 200;
+}
+
+#wrapper a,
+#wrapper button {
+	font-weight: bold;
+}
+
+#wrapper .btn {
+	--bs-btn-bg: #E21982;
+    --bs-btn-color: white;
+    --bs-btn-active-color: white;
+    --bs-btn-active-bg: #ff2a99;
+    --bs-btn-hover-color: white;
+    --bs-btn-hover-bg: #ff2a99;
+	border-radius: 20px;
+	font-size: 16px;
+}
+
+#wrapper .btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+}
+
+#wrapper .bg-gray,
+#wrapper .bg-grey {
+	background-color: #E8E8E8;
+}
+
+.navbar .navbar-brand > img {
+	max-height: 40px;
+}
+
+.navbar .navbar-right {
+	display: flex;
+	flex-direction: row-reverse;
+}
+	
+@media (max-width: 767px) {
+    .navbar .navbar-right {
+        display: contents;
+    }
+}
+
+.navbar .navbar-right__list > .nav-link {
+	margin: 0 20px;
+}
+
+.banner-principal .img-fluid {
+	min-height: 300px;
+}
+
+.invite,
+.banner-principal {
+	color: white;
+}
+
+#wrapper .banner-principal .banner-principal__text > .title {
+	font-size: 40px;
+}
+
+.banner-principal .banner-principal__text > .bajada {
+	font-size: 22px;
+}
+
+.banner-principal .banner-principal__text > .btn {
+	margin-top: 30px;
+	padding: 8px 16px;
+}
+
+@media (min-width: 576px) {
+	#register-form {
+		border: 1px solid #f3f3ff;
+		border-radius: 14px;
+		box-shadow: 0px 0px 14px -7px #255681
+	}
+}
+
+#register-form .step {
+	height: 350px;
+}
+
+@media (max-width: 575px) {
+	#register-form .step {
+		height: 525px;
+	}
+
+	#register-form #step5 {
+		height: 250px;
+	}
+}
+
+#register-form .form-floating label {
+	padding-left: 16px;
+}
+
+#register-form .invalid-feedback {
+	white-space: nowrap;
+}
+
+#register-form .form-floating:not(.form-control:disabled)::before {
+	width: auto;
+}
+
+#register-form .bi-check-circle {
+	color: var(--bs-form-valid-border-color);
+    font-size: 76px;
+}
+
+#footer {
+	background-color: #22193F;
+	color: white;
+	font-size: 14px;
+}
+
+#footer .footer__top .navbar-brand img {
+	margin-bottom: 18px;
+}
+
+@media (max-width: 767px) {
+	
+	#footer .footer__top .navbar-brand {
+		border-bottom: 1px solid white;
+		margin: 0 -10px;
+	}
+	
+	#footer .footer-column:not(:last-child) {
+		border-bottom: 1px solid white;
+	}
+	
+	#footer .footer-column .footer-column__list {
+		column-count: 3;
+	}
+}
+
+@media (max-width: 575px) {
+	#footer .footer-column .footer-column__list {
+		column-count: 1;
+	}
+}
+
+#footer .footer__copyright {
+	font-size: 12px;
+}
